@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+require 'cruisecontrolrb_to_hipchat'
+
+Dante.run('myapp') do |opts|
+  # opts: host, pid_path, port, daemonize, user, group
+
+  raise 'Missing required Cruisecontrol host: export CC_HOST=<your_cc_host>' unless  host = ENV["CC_HOST"]
+  raise 'Missing required HipChat api token, export HIPCHAT_AUTH_TOKEN=<token>' unless token = ENV["HIPCHAT_AUTH_TOKEN"]
+  raise 'Missing required HipChat Room to send message to, export HIPCHAT_ROOM_ID=<room_id>' unless room = ENV["HIPCHAT_ROOM_ID"]
+
+  options = {cc_host: host, 
+             cc_username: ENV["CC_USERNAME"] || "", 
+             cc_password: ENV["CC_PASSWORD"] || "",
+             hipchat_api_token: token,
+             hipchat_room_id: room ,
+             polling_interval: ENV["POLLING_INTERVAL"] || 5}
+
+  CruisecontrolrbToHipchat::Runner.run(options)
+end

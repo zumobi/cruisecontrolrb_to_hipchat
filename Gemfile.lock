@@ -1,29 +1,36 @@
-GEM
-  remote: http://rubygems.org/
+PATH
+  remote: .
   specs:
-    httparty (0.8.1)
-      multi_json
-      multi_xml
-    multi_json (1.0.4)
-    multi_xml (0.4.1)
-    nokogiri (1.5.0)
-    rack (1.3.5)
-    rack-protection (1.1.4)
-      rack
-    rufus-scheduler (2.0.15)
-      tzinfo (>= 0.3.23)
-    sinatra (1.3.1)
-      rack (~> 1.3, >= 1.3.4)
-      rack-protection (~> 1.1, >= 1.1.2)
-      tilt (~> 1.3, >= 1.3.3)
-    tilt (1.3.3)
-    tzinfo (0.3.31)
+    cruisecontrolrb_to_hipchat (0.0.1)
+      dante (~> 0.2.0)
+      hipchat (~> 1.2.0)
+      httparty (~> 0.13.1)
+      nokogiri (~> 1.6.2)
+      rufus-scheduler
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    dante (0.2.0)
+    hipchat (1.2.0)
+      httparty
+    httparty (0.13.1)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
+    json (1.8.1)
+    mini_portile (0.6.0)
+    multi_xml (0.5.5)
+    nokogiri (1.6.2.1)
+      mini_portile (= 0.6.0)
+    rake (10.3.2)
+    rufus-scheduler (2.0.24)
+      tzinfo (>= 0.3.22)
+    tzinfo (0.3.39)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  httparty
-  nokogiri
-  rufus-scheduler
-  sinatra
+  bundler (~> 1.6)
+  cruisecontrolrb_to_hipchat!
+  rake

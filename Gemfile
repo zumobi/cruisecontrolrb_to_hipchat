@@ -1,6 +1,4 @@
 source 'https://rubygems.org'
 
-gem "sinatra"
-gem "nokogiri"
-gem "rufus-scheduler"
-gem "httparty"
+# Specify your gem's dependencies in cruisecontrolrb_to_hipchat.gemspec
+gemspec
