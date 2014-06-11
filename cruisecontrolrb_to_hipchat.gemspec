@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = CruisecontrolrbToHipchat::VERSION
   spec.authors       = ["epinault"]
   spec.email         = ["emmanuel.pinault@zumobi.com"]
-  spec.summary       = %q{A simple daemon to report last build status from cruisecontrol}
-  spec.description   = %q{Inspired from https://github.com/andrewpbrett/cruisecontrolrb_to_hipchat but with support of more recent api and multiple projects}
+  spec.summary       = %q{A simple daemon to report last build status of projects and activities from cruisecontrol}
+  spec.description   = %q{A simple daemon to report last build status of projects and activities from cruisecontrol. Inspired from https://github.com/andrewpbrett/cruisecontrolrb_to_hipchat but with support of more recent api and multiple projects}
   spec.homepage      = "http://github.com/zumobi/cruisecontrolrb_to_hipchat"
   spec.license       = "MIT"
 
