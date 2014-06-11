@@ -12,7 +12,8 @@ Gem::Specification.new do |spec|
   spec.description   = %q{A simple daemon to report last build status of projects and activities from cruisecontrol. Inspired from https://github.com/andrewpbrett/cruisecontrolrb_to_hipchat but with support of more recent api and multiple projects}
   spec.homepage      = "http://github.com/zumobi/cruisecontrolrb_to_hipchat"
   spec.license       = "MIT"
-
+  spec.required_ruby_version = '>= 1.9.3'
+  
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
